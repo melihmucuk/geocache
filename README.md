@@ -1,4 +1,4 @@
-# geocache [![GoDoc](https://godoc.org/github.com/melihmucuk/geocache?status.svg)](https://godoc.org/github.com/melihmucuk/geocache)
+# geocache [![GoDoc](https://godoc.org/github.com/melihmucuk/geocache?status.svg)](https://godoc.org/github.com/melihmucuk/geocache) [![Go Report Card](https://goreportcard.com/badge/melihmucuk/geocache)](https://goreportcard.com/report/melihmucuk/geocache) [![Build Status](http://img.shields.io/travis/melihmucuk/geocache.svg?style=flat)](https://travis-ci.org/melihmucuk/geocache)
 
 geocache is an in-memory cache that is suitable for geolocation based applications. It uses geolocation as a key for storing items. You can specify range on initialization and thats it! You can store any object, it uses interface.
 
