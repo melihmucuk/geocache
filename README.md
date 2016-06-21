@@ -8,6 +8,8 @@ geocache is an in-memory cache that is suitable for geolocation based applicatio
 
 ### Usage
 
+![geolocation cache](http://i.imgur.com/O6UzVEW.png "Geolocation Cache")
+
 ```go
 
 import (
@@ -19,15 +21,15 @@ import (
 
 func main() {
 	c, err := geocache.NewCache(5*time.Minute, 30*time.Second, geocache.WithIn1KM)
-	geoPoint := geocache.GeoPoint{Latitude: 41.2391, Longitude: 29.3122}
+	geoPoint := geocache.GeoPoint{Latitude: 40.9887, Longitude: 28.7817}
 	if err != nil {
 		fmt.Println("Error: ", err.Error())
 	} else {
 		c.Set(geoPoint, "helloooo", 2*time.Minute)
 		v1, ok1 := c.Get(geocache.GeoPoint{Latitude: 41.2, Longitude: 29.3})
 		v2, ok2 := c.Get(geocache.GeoPoint{Latitude: 41.2142, Longitude: 29.4234})
-		v3, ok3 := c.Get(geocache.GeoPoint{Latitude: 41.3142, Longitude: 29.3241})
-		v4, ok4 := c.Get(geocache.GeoPoint{Latitude: 41.2392, Longitude: 29.3181})
+		v3, ok3 := c.Get(geocache.GeoPoint{Latitude: 40.9858, Longitude: 28.7852})
+		v4, ok4 := c.Get(geocache.GeoPoint{Latitude: 40.9827, Longitude: 28.7883})
 		fmt.Println(v1, ok1)
 		fmt.Println(v2, ok2)
 		fmt.Println(v3, ok3)
@@ -41,7 +43,7 @@ outputs:
 ```
 <nil>, false
 <nil>, false
-<nil>, false
+helloooo, true
 helloooo, true
 ```
 
